@@ -110,7 +110,7 @@ const Home = () => {
         Code by Sammunat LLC.
         <ul className="flex justify-center space-x-4 mt-2">Contact</ul>
       </footer>
-      
+      sammunat llc
     </div>
 
     
