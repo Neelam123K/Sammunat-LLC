@@ -18,22 +18,22 @@ const Home = () => {
       {/* HERO SECTION */}
       <section className="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
 
-        {/* LEFT CONTENT */}
+        {/* LEFT  */}
         <div>
           <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
-            Build Modern Web Apps <br />
+            This is a Landing page <br />
             with <span className="text-sky-400">React & Tailwind</span>
           </h1>
 
-          <p className="text-gray-300 text-lg mb-8">
+          <p className="text-gray-400 text-lg mb-8">
             Trusted by developers and teams to build fast, scalable and
-            beautiful applications.
+            beautiful applications with Modern tools for modern applications..
           </p>
 
           {/* SIDE BUTTONS */}
           <div className="flex gap-4">
             <button className="px-6 py-3 bg-sky-500 hover:bg-sky-600 rounded-lg font-semibold">
-              Get Started
+              Get Started learning
             </button>
             <button className="px-6 py-3 border border-gray-400 hover:bg-white hover:text-black rounded-lg font-semibold">
               View Demo
@@ -77,28 +77,28 @@ const Home = () => {
 
         <div className="bg-slate-900 p-6 rounded-2xl shadow-lg hover:scale-105 transition">
           <h3 className="text-xl font-semibold mb-3 text-sky-400">
-            🚀 Fast Performance
+            Fast Performance
           </h3>
           <p className="text-gray-300">
-            Optimized components and modern UI for blazing fast speed.
+            Fast, smooth, and responsive user experience.
           </p>
         </div>
 
         <div className="bg-slate-900 p-6 rounded-2xl shadow-lg hover:scale-105 transition">
           <h3 className="text-xl font-semibold mb-3 text-sky-400">
-            🎨 Beautiful Design
+            Beautiful Design
           </h3>
           <p className="text-gray-300">
-            Clean, responsive and elegant layouts using Tailwind CSS.
+            Crafted with beauty and usability in mind.
           </p>
         </div>
 
         <div className="bg-slate-900 p-6 rounded-2xl shadow-lg hover:scale-105 transition">
           <h3 className="text-xl font-semibold mb-3 text-sky-400">
-            🔒 Secure
+            Secure
           </h3>
           <p className="text-gray-300">
-            Best practices for authentication and data protection.
+            Secure by design, trusted by users.
           </p>
         </div>
 
@@ -110,7 +110,6 @@ const Home = () => {
         Code by Sammunat LLC.
         <ul className="flex justify-center space-x-4 mt-2">Contact</ul>
       </footer>
-      sammunat llc
     </div>
 
     
