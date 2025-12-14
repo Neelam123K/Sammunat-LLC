@@ -2,6 +2,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import { GrSecure } from "react-icons/gr";
+import { FaPaintBrush } from "react-icons/fa";
+import { GiSpeedBoat } from "react-icons/gi";
+
 
 const partners = [
   "https://randomuser.me/api/portraits/men/32.jpg",
@@ -75,34 +79,38 @@ const Home = () => {
             {/* FEATURES SECTION */}
       <section className="max-w-7xl mx-auto px-6 py-16 grid gap-8 md:grid-cols-3">
 
-        <div className="bg-slate-900 p-6 rounded-2xl shadow-lg hover:scale-105 transition">
-          <h3 className="text-xl font-semibold mb-3 text-sky-400">
-            Fast Performance
-          </h3>
-          <p className="text-gray-300">
-            Fast, smooth, and responsive user experience.
-          </p>
-        </div>
+    <div className="bg-slate-900 p-6 rounded-2xl shadow-lg hover:scale-105 transition">
+    <h3 className="flex items-center gap-2 text-xl font-semibold mb-3 text-sky-400">
+      <GiSpeedBoat className="text-2xl" />
+      Fast Performance
+    </h3>
+    <p className="text-gray-300">
+      Fast, smooth, and responsive user experience.
+    </p>
+    </div>
 
-        <div className="bg-slate-900 p-6 rounded-2xl shadow-lg hover:scale-105 transition">
-          <h3 className="text-xl font-semibold mb-3 text-sky-400">
-            Beautiful Design
-          </h3>
-          <p className="text-gray-300">
-            Crafted with beauty and usability in mind.
-          </p>
-        </div>
+  <div className="bg-slate-900 p-6 rounded-2xl shadow-lg hover:scale-105 transition">
+    <h3 className="flex items-center gap-2 text-xl font-semibold mb-3 text-sky-400">
+      <FaPaintBrush className="text-2xl" />
+      Beautiful Design
+    </h3>
+    <p className="text-gray-300">
+      Crafted with beauty and usability in mind.
+    </p>
+  </div>
 
-        <div className="bg-slate-900 p-6 rounded-2xl shadow-lg hover:scale-105 transition">
-          <h3 className="text-xl font-semibold mb-3 text-sky-400">
-            Secure
-          </h3>
-          <p className="text-gray-300">
-            Secure by design, trusted by users.
-          </p>
-        </div>
+  <div className="bg-slate-900 p-6 rounded-2xl shadow-lg hover:scale-105 transition">
+    <h3 className="flex items-center gap-2 text-xl font-semibold mb-3 text-sky-400">
+      <GrSecure className="text-2xl" />
+      Secure
+    </h3>
+    <p className="text-gray-300">
+      Secure by design, trusted by users.
+    </p>
+  </div>
 
-      </section>
+</section>
+
 
       {/* FOOTER */}
       <footer className="text-center py-6 text-gray-400 border-t border-gray-700">
