@@ -1,11 +1,10 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import "swiper/css";
-import "swiper/css/navigation";
+
 import { GrSecure } from "react-icons/gr";
 import { FaPaintBrush } from "react-icons/fa";
 import { GiSpeedBoat } from "react-icons/gi";
-
 
 const partners = [
   "https://randomuser.me/api/portraits/men/32.jpg",
@@ -15,60 +14,61 @@ const partners = [
   "https://randomuser.me/api/portraits/men/85.jpg",
 ];
 
-const Home = () => {
+export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 to-slate-800 text-white">
+    <div className="min-h-[60] screen w-full overflow-x-hidden bg-gradient-to-br from-slate-900 to-slate-800 text-white">
 
-      {/* HERO SECTION */}
-      <section className="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
+      {/* HERO */}
+      <section className="max-w-7xl mx-auto px-4 py-12]
+                          grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
 
-        {/* LEFT  */}
-        <div>
-          <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
-            This is a Landing page <br />
+        {/* LEFT */}
+        <div className="text-center md:text-left">
+          <h1 className="font-bold text-white mb-4
+                         text-[clamp(1.5rem,5vw,3rem)] leading-tight">
+            Landing Page <br />
             with <span className="text-sky-400">React & Tailwind</span>
           </h1>
 
-          <p className="text-gray-400 text-lg mb-8">
-            Trusted by developers and teams to build fast, scalable and
-            beautiful applications with Modern tools for modern applications..
+          <p className="text-gray-400 mb-6 text-[clamp(0.875rem,3vw,1.25rem)]">
+            Build fast, scalable, and beautiful applications that automatically
+            fit your screen.
           </p>
 
-          {/* SIDE BUTTONS */}
-          <div className="flex gap-4">
-            <button className="px-6 py-3 bg-sky-500 hover:bg-sky-600 rounded-lg font-semibold">
-              Get Started learning
+          {/* BUTTONS */}
+          <div className="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
+            <button className="w-full sm:w-auto px-5 py-2 sm:py-3 rounded-lg font-semibold
+                               text-[clamp(0.875rem,2.5vw,1rem)] bg-sky-500 hover:bg-sky-600 transition">
+              Get Started
             </button>
-            <button className="px-6 py-3 border border-gray-400 hover:bg-white hover:text-black rounded-lg font-semibold">
+
+            <button className="w-full sm:w-auto px-5 py-2 sm:py-3 rounded-lg font-semibold
+                               text-[clamp(0.875rem,2.5vw,1rem)] border border-gray-400 hover:bg-white hover:text-black transition">
               View Demo
             </button>
           </div>
         </div>
 
-        {/* RIGHT SIDE IMAGE */}
-        <div className="bg-slate-900 rounded-2xl p-8 shadow-xl">
-          <h3 className="text-xl font-semibold mb-6 text-center text-sky-400">
+        {/* RIGHT - SWIPER */}
+        <div className="bg-slate-900 rounded-xl p-4 shadow-lg w-full">
+          <h3 className="text-center text-sky-400 font-semibold mb-3
+                         text-[clamp(1rem,3vw,1.25rem)]">
             Trusted by Professionals
           </h3>
 
           <Swiper
-            modules={[Navigation, Autoplay]}
-            spaceBetween={20}
-            slidesPerView={3}
-            navigation
-            autoplay={{ delay: 2000 }}
+            modules={[Autoplay]}
+            autoplay={{ delay: 2500 }}
             loop
-            breakpoints={{
-              0: { slidesPerView: 2 },
-              768: { slidesPerView: 3 },
-            }}
+            slidesPerView={1}
+            spaceBetween={10}
           >
             {partners.map((img, index) => (
               <SwiperSlide key={index}>
                 <img
                   src={img}
                   alt="User"
-                  className="rounded-xl h-24 w-full object-cover grayscale hover:grayscale-0 transition"
+                  className="w-full h-60 sm:h-68 md:h-64 rounded-lg object-cover"
                 />
               </SwiperSlide>
             ))}
@@ -76,52 +76,47 @@ const Home = () => {
         </div>
       </section>
 
-            {/* FEATURES SECTION */}
-      <section className="max-w-7xl mx-auto px-6 py-16 grid gap-8 md:grid-cols-3">
+      {/*FEATURES */}
+      <section className="max-w-7xl mx-auto px-4 py-10
+                          grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
 
-    <div className="bg-slate-900 p-6 rounded-2xl shadow-lg hover:scale-105 transition">
-    <h3 className="flex items-center gap-2 text-xl font-semibold mb-3 text-sky-400">
-      <GiSpeedBoat className="text-2xl" />
-      Fast Performance
-    </h3>
-    <p className="text-gray-300">
-      Fast, smooth, and responsive user experience.
-    </p>
-    </div>
+        <div className="bg-slate-900 p-4 rounded-xl text-center">
+          <GiSpeedBoat className="text-sky-400 mx-auto mb-2 text-[clamp(1.5rem,4vw,2.5rem)]" />
+          <h3 className="font-semibold text-[clamp(1rem,2.5vw,1.25rem)] mb-1">
+            Fast Performance
+          </h3>
+          <p className="text-gray-300 text-[clamp(0.75rem,2vw,1rem)]">
+            Smooth experience on all screens.
+          </p>
+        </div>
 
-  <div className="bg-slate-900 p-6 rounded-2xl shadow-lg hover:scale-105 transition">
-    <h3 className="flex items-center gap-2 text-xl font-semibold mb-3 text-sky-400">
-      <FaPaintBrush className="text-2xl" />
-      Beautiful Design
-    </h3>
-    <p className="text-gray-300">
-      Crafted with beauty and usability in mind.
-    </p>
-  </div>
+        <div className="bg-slate-900 p-4 rounded-xl text-center">
+          <FaPaintBrush className="text-sky-400 mx-auto mb-2 text-[clamp(1.5rem,4vw,2.5rem)]" />
+          <h3 className="font-semibold text-[clamp(1rem,2.5vw,1.25rem)] mb-1">
+            Beautiful Design
+          </h3>
+          <p className="text-gray-300 text-[clamp(0.75rem,2vw,1rem)]">
+            Clean and modern UI.
+          </p>
+        </div>
 
-  <div className="bg-slate-900 p-6 rounded-2xl shadow-lg hover:scale-105 transition">
-    <h3 className="flex items-center gap-2 text-xl font-semibold mb-3 text-sky-400">
-      <GrSecure className="text-2xl" />
-      Secure
-    </h3>
-    <p className="text-gray-300">
-      Secure by design, trusted by users.
-    </p>
-  </div>
+        <div className="bg-slate-900 p-4 rounded-xl text-center">
+          <GrSecure className="text-sky-400 mx-auto mb-2 text-[clamp(1.5rem,4vw,2.5rem)]" />
+          <h3 className="font-semibold text-[clamp(1rem,2.5vw,1.25rem)] mb-1">
+            Secure
+          </h3>
+          <p className="text-gray-300 text-[clamp(0.75rem,2vw,1rem)]">
+            Secure by design.
+          </p>
+        </div>
 
-</section>
+      </section>
 
-
-      {/* FOOTER */}
-      <footer className="text-center py-6 text-gray-400 border-t border-gray-700">
+      {/*FOOTER */}
+      <footer className="text-center text-gray-400 text-[clamp(0.75rem,2vw,0.875rem)] py-4 border-t border-gray-700">
         © 2025 MyApp. All rights reserved.
-        Code by Sammunat LLC.
-        <ul className="flex justify-center space-x-4 mt-2">Contact</ul>
       </footer>
+
     </div>
-
-    
   );
-};
-
-export default Home;
+}
